@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Torikus</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- navigation  -->
@@ -28,6 +26,52 @@
             <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
     </nav>
+
+    <!-- hero section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <canvas id="particleCanvas"></canvas>
+        </div>
+        <div class="hero-content">
+            <div class="hero-greeting">
+                <span class="typing-text" id="typingText"></span>
+                <span class="cursor-blink">|</span>
+            </div>
+            <h1 class="hero-title">
+                Full Stack
+                <br>
+                <span class="gradient-text">Developer</span>
+            </h1>
+            <p class="hero-description">
+                Building scalable web applications with modern technologies.
+                Passionate about clean code, user experience, and performance.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View Projects</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="20">0</span>+
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="3">0</span>+
+                    <span class="stat-label">Years Exp</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="12">0</span>+
+                    <span class="stat-label">Clients</span>
+                </div>
+            </div>
+        </div>
+        
+    </section>
 
     <script src="./script.js"></script>
 </body>
