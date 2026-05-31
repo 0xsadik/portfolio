@@ -219,3 +219,25 @@ const statsObserver = new IntersectionObserver(countUp, {
 if (statsSection) {
     statsObserver.observe(statsSection);
 }
+
+
+
+/* ===== Skill Bars Animation ===== */
+const skillItems = document.querySelectorAll('.skill-item');
+let skillsAnimated = false;
+
+function animateSkills() {
+    const skillsSection = document.getElementById('skills');
+    const rect = skillsSection.getBoundingClientRect();
+
+    if (rect.top < window.innerHeight - 100 && !skillsAnimated) {
+        skillsAnimated = true;
+        skillItems.forEach(item => {
+            const level = item.getAttribute('data-level');
+            const progress = item.querySelector('.skill-progress');
+            progress.style.width = `${level}%`;
+        });
+    }
+}
+
+window.addEventListener('scroll', animateSkills);
